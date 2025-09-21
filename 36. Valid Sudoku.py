@@ -2,9 +2,9 @@ class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
         cols = collections.defaultdict(set)  # key is the column number and the value is another set of all values in this column
         rows = collections.defaultdict(set)
-        squares = collections.defaultdict(set)  # key = (r / 3, c / 3)
+        squares = collections.defaultdict(set)  # key = (r / 3, c / 3)  KEY IS A TUPLE
 
-        # hard coding range(9) since sodoku boards must be 9 by 9
+        # hard-coding range(9) since Sudoku boards must be 9 by 9
         for r in range(9):
             for c in range(9):
                 # if board[r][c] is blank, continue
